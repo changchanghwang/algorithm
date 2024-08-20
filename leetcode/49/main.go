@@ -24,9 +24,6 @@ func groupAnagrams(strs []string) [][]string {
 		sortedStr := sortString(str)
 
 		anagrams[sortedStr] = append(anagrams[sortedStr], str)
-		fmt.Println("str:", str)
-		fmt.Println("sortedStr:", sortedStr)
-		fmt.Println("anagrams:", anagrams)
 	}
 
 	result := make([][]string, 0, len(anagrams))
