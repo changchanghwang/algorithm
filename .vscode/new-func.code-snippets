@@ -1,5 +1,5 @@
 {
-	"Generate Story template": {
+	"Generate main function template": {
 		"scope": "go",
 		"prefix": "nf",
 		"body": [
@@ -9,6 +9,20 @@
 			"",
 			"}",
 		],
-		"description": "Generate Story template"
+		"description": "Generate main function template"
+	},
+	"Generate solution function template": {
+		"scope": "javascript",
+		"prefix": "nf",
+		"body": [
+			"function solution() {",
+			"  const result =0",
+			"",
+			"  return result",
+			"}",
+			"",
+			"console.log(solution())"
+		],
+		"description": "Generate main function template"
 	}
 }
