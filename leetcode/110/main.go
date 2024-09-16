@@ -1,7 +1,7 @@
 package main
 
 func main() {
-
+	isBalanced(nil)
 }
 
 // Definition for a binary tree node.
