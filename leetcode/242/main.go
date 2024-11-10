@@ -11,10 +11,12 @@ func main() {
 	println(result)
 }
 
+// Time complexity, O(nlogn)
+// Space complexity, O(n)
 func isAnagram(s string, t string) bool {
 	runes1 := []rune(s)
 	runes2 := []rune(t)
-	sort.Slice(runes1, func(i, j int) bool {
+	sort.Slice(runes1, func(i, j int) bool { // Quick sort, O(nlogn)
 		return runes1[i] < runes1[j]
 	})
 	sort.Slice(runes2, func(i, j int) bool {
@@ -24,6 +26,8 @@ func isAnagram(s string, t string) bool {
 	return string(runes1) == string(runes2)
 }
 
+// Time complexity, O(n)
+// Space complexity, O(1)
 func isAnagram2(s string, t string) bool {
 	if len(s) != len(t) {
 		return false

@@ -8,6 +8,8 @@ func main() {
 	fmt.Println(result)
 }
 
+// Time complexity, O(n)
+// Space complexity, O(n)
 func containsDuplicate(nums []int) bool {
 	m := map[int]bool{}
 	for _, num := range nums {

@@ -12,6 +12,8 @@ func main() {
 	fmt.Println(result)
 }
 
+// Time: O(nlogn)
+// Space: O(n)
 func topKFrequent(nums []int, k int) []int {
 	hashMap := map[int]int{}
 	for _, num := range nums {
