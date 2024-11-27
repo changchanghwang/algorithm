@@ -7,6 +7,8 @@ func main () {
 
 }
 
+// time complexity: O(n)
+// space complexity: O(n)
 func isValid(s string) bool {
 	stack := []rune{}
 
