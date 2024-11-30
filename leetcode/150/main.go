@@ -8,6 +8,8 @@ func main () {
 	println(evalRPN(result))
 }
 
+// time complexity: O(n)
+// space complexity: O(n)
 func evalRPN(tokens []string) int {
 	stack := []int{}
 	
