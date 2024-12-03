@@ -34,6 +34,8 @@ func isPalindrome(s string) bool {
 	return reverseAndFilteredString == filteredString
 }
 
+// O(n) time complexity
+// O(n) space complexity
 func isPalindrome2(s string) bool {
 	reverseAndFilteredString := ""
 	var filteredString strings.Builder
@@ -41,12 +43,10 @@ func isPalindrome2(s string) bool {
 
 	for _, char := range lowerCaseString {
 		if unicode.IsLetter(char) || unicode.IsDigit(char) {
-			reverseAndFilteredString = string(char)  + reverseAndFilteredString
+			reverseAndFilteredString = string(char) + reverseAndFilteredString
 			filteredString.WriteRune(char)
 		}
 	}
 
 	return reverseAndFilteredString == filteredString.String()
 }
-
-
