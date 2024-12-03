@@ -36,17 +36,17 @@ func isPalindrome(s string) bool {
 
 func isPalindrome2(s string) bool {
 	reverseAndFilteredString := ""
-	filteredString := ""
+	var filteredString strings.Builder
+	lowerCaseString := strings.ToLower(s)
 
-	for _, char := range s {
+	for _, char := range lowerCaseString {
 		if unicode.IsLetter(char) || unicode.IsDigit(char) {
-			c := strings.ToLower(string(char))
-			reverseAndFilteredString = c  + reverseAndFilteredString
-			filteredString +=  c
+			reverseAndFilteredString = string(char)  + reverseAndFilteredString
+			filteredString.WriteRune(char)
 		}
 	}
 
-	return reverseAndFilteredString == filteredString
+	return reverseAndFilteredString == filteredString.String()
 }
 
 
