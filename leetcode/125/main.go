@@ -4,12 +4,15 @@ import (
 	"fmt"
 	"regexp"
 	"strings"
+	"unicode"
 )
 
 func main () {
 	s := "0P"
 	result := isPalindrome(s)
+	result2 := isPalindrome2(s)
 	fmt.Println(result)
+	fmt.Println(result2)
 }
 
 
@@ -30,4 +33,20 @@ func isPalindrome(s string) bool {
 
 	return reverseAndFilteredString == filteredString
 }
+
+func isPalindrome2(s string) bool {
+	reverseAndFilteredString := ""
+	filteredString := ""
+
+	for _, char := range s {
+		if unicode.IsLetter(char) || unicode.IsDigit(char) {
+			c := strings.ToLower(string(char))
+			reverseAndFilteredString = c  + reverseAndFilteredString
+			filteredString +=  c
+		}
+	}
+
+	return reverseAndFilteredString == filteredString
+}
+
 
