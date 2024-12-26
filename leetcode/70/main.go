@@ -6,6 +6,9 @@ func main() {
 	println(result)
 }
 
+// Time complexity, O(n)
+// Space complexity, O(1)
+// 피보나치 수열
 func climbStairs(n int) int {
 	a, b := 1, 1
 	for ; n > 1; n-- {
